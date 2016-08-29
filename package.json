@@ -56,7 +56,7 @@
   },
   "scripts": {
     "build": "npm run babel",
-    "babel": "rm -rf ./lib && babel src --out-dir lib --copy-files",
+    "babel": "rm -rf ./lib && node_modules/.bin/babel src --out-dir lib --copy-files",
     "coveralls": "cat ./test/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "dev": "rm -rf ./lib && babel -w src --out-dir lib --copy-files",
     "lint": "eslint src/**",
