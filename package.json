@@ -61,6 +61,7 @@
     "dev": "rm -rf ./lib && babel -w src --out-dir lib --copy-files",
     "lint": "eslint src/**",
     "plaintest": "mocha --check-leaks -b -R spec test/index.js && npm run tape",
+    "preinstall": "npm run babel",
     "prepublish": "npm run babel",
     "tape": "node test/tape/index.js | tap-spec",
     "test": "npm run lint && istanbul --config=test/.istanbul.yml cover node_modules/mocha/bin/_mocha -- --check-leaks -b -R spec test/index.js && npm run tape"
